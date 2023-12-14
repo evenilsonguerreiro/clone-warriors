@@ -9,12 +9,17 @@
         margin-top: 44px;
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+        @media (max-width:768px){
+            grid-template-columns: 1fr 1fr ;
+        }
 
         &--is-active{
             display: grid;
         }
 
-        gap: 24px;
+        
         &__item{
             
 
@@ -30,6 +35,12 @@
         display: flex;
         justify-content: center;
 
+
+        @media (max-width:768px){
+            white-space: nowrap;
+
+        }
+
         &__button{
             font-size: 20px;
             border: none;
@@ -44,6 +55,10 @@
 
             &--is-active{
                 border-bottom: 5px solid variaveis.$textCortercearia;
+            }
+
+            @media (max-width:768px){
+                font-size: 16px;
             }
         }
     }
